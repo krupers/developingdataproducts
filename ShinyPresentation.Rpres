@@ -1,0 +1,48 @@
+Presentation of Shiny App
+========================================================
+author: Artur Krupa
+date: 26th of April, 2015
+
+Application details
+========================================================
+
+Application is built especially for those, who want to easily calculate a consumption of favourite cars.
+
+If you really wanted to do this - our application is especially for you!
+
+Characteristics
+========================================================
+
+Application is made in {R} to provide highest quality and fast work.
+
+Based on real dataset from Motor Trend US magazine released in 1974,
+you can see the life-results life on HP and/or Cylinders of cars.
+
+The best is that you have choice!
+
+How it works? 
+========================================================
+
+When you choose a value of cylinders and/or a HP options,
+application gets the results from database.
+
+Below example code sent to server:
+```{r,results='hide'}
+data <- mtcars
+tmp <- data[data$cyl == 6 & data$hp <= 180, ]
+mean(tmp$mpg)
+```
+
+Summary
+========================================================
+
+Here is the result of code on previous slide:
+```{r, echo=FALSE}
+data <- mtcars
+tmp <- data[data$cyl == 6 & data$hp <= 180, ]
+mean(tmp$mpg)
+```
+
+As you can see, you do not need to know the {R}-code, becauase application is below the website.
+
+Feel free to try it and give us a feedback!
